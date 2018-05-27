@@ -1,0 +1,66 @@
+
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>	<style>
+  table {
+    border: 1px solid green;
+  }
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>   
+  </thead>
+  <tbody>
+    <tr>
+    <td>Lorem ipsum dolor</td>
+    <td>consectetur adipisicing elit.</td>
+    <td>Sunt, accusantium. Ipsum culpa</td>
+  </tr>
+
+    <tr>
+    <td>pariatur sunt id, amet</td>
+    <td>dignissimos aliquam dicta nemo, incidunt</td>
+    <td>dolor consequatur quas. Optio</td>
+  </tr>
+
+    <tr>
+    <td>cum, deleniti. Atque consectetur</td>
+    <td>officia</td>
+    <td>Ipsa doloremque, dolorum</td>
+  </tr>
+
+    <tr>
+    <td>consequatur magni, repudiandae</td>
+    <td>sapiente. Eos labore soluta</td>
+    <td>adipisci sequi modi</td>
+  </tr>
+
+    <tr>
+    <td>sed fugit, aspernatur</td>
+    <td>aliquam voluptate blanditiis</td>
+    <td>delectus, sint veniam quaerat</td>
+  </tr>
+
+    <tr>
+    <td>facere architecto ipsum rem.</td>
+    <td>Dolor omnis, a?</td>
+    <td>Dolor omnis, a?</td>
+  </tr>
+
+    <tr>
+    <td>Error eius inventore est perspiciatis</td>
+    <td></td>
+    <td>iure labore, doloribus ex possimus</td>
+  </tr>
+
+    <tr>
+    <td>eum accusantium</td>
+    <td>eaque dolor in dolorem</td>
+    <td>Adipisci temporibus at reiciendis</td>
+  </tr>
+
+    </tbody>
+</table>

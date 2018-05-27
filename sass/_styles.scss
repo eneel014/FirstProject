@@ -1,0 +1,167 @@
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+@mixin transition($a) {
+	@include prefix(transition, $a, moz webkit);
+}
+
+@mixin translateXY($x, $y) {
+	@include prefix(transform, translate($x, $y), webkit moz ms o);
+}
+
+@mixin translateX($x) {
+	@include prefix(transform, translateX($x), webkit moz ms o);	
+}
+
+@mixin translateY($y) {
+	@include prefix(transform, translateY($Y), webkit moz ms o);	
+}
+
+header, main, footer {
+	padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+	header, main, footer {
+		padding-left: 0;
+	}
+}
+
+.cptlze {
+	text-transform: capitalize;
+}
+//Defaults
+.date-time-holder {
+	font-size: 25px;
+}
+i.waves-input-wrapper {
+	padding: 0;
+	input {
+		padding: 0 2rem;
+		height: 36px;
+		outline: 0;
+	}
+}
+ul.inline-list {
+	li {
+		display: inline-block;
+		width: 48%;
+	}
+}
+.waves-effect.waves-grey .waves-ripple {
+  background-color: rgba(221, 221, 221, .35);
+}
+.collapsible {
+	a.collapsible-header {
+		color: rgba(0, 0, 0, .87);
+	}
+}
+// Login page
+.login-page {
+	.side-nav {
+		display: none;
+	}
+	header {
+		display: none;
+		
+	}
+	main {
+		padding-left: 0;
+		.login-section {
+			.login-inner {
+				height: 100vh;
+				position: relative;
+
+				.login-box {
+					max-width: 600px;
+					padding: 30px;
+					width: 100%;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					@include translateXY(-50%, -50%);
+					 .error-msg {
+					 	cursor: pointer;
+						position: absolute;
+						bottom: 100%;
+						left: 1.8%;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.remarks-td {
+
+	.btn {
+		font-size: .85em;
+	    display: block;
+	    margin: 2px auto;
+	    height: auto;
+	    line-height: 21px;
+	    width: auto;
+	    padding-left: 0;
+	    padding-right: 0;
+	}	
+}
+
+.actions-td {
+	position: relative;	
+	.delete-container {
+		position: absolute;
+		padding: 10px 0 20px;	
+		&:not(.scale-out) {
+			color: rgba(0, 0, 0, 0.87);
+			@include prefix(transform, translateY(-50%), moz ms webkit);
+			z-index: 1;
+			top: 50%;
+		}
+	}
+	a {
+		margin-right: 8px;
+
+		&.danger {
+			color: color('red', 'lighten-1');
+		}
+	}
+}
+
+// Add Client Page
+.add-client-page{
+
+	.autocomplete-content {
+		position: absolute;
+	}
+
+	.error-row {
+		display: none;
+		.error-div {
+			position: relative;
+			border-radius: 5px;
+			cursor: pointer;
+			h6 {
+				margin-bottom: 0;
+			}
+			a {
+				position: absolute;	
+				top: 5px;
+				right: 5px;	
+			}
+		}
+	}
+}
+
+.edit-client-page {
+	@extend .add-client-page;
+}
+
+.linethrough {
+	text-decoration: line-through;
+}
