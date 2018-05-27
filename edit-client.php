@@ -9,6 +9,8 @@ $query = "SELECT * FROM tbl_clients	 WHERE id = '$client_id'";
 $result = $conn->query($query); 
 $r = $result->fetch_assoc(); ?>
 
+<!-- Test -->
+
 <form method="POST" name="editClientForm" id="editClientForm">
 	<div class="section">
 		<div class="row"><div class="col s12">&nbsp;</div></div>
